@@ -26,7 +26,7 @@ function sendFailureMessage(error, res) {
     status = 'validation error';
   }
 
-  let mongooseError = _.get(error, 'response.data.error');
+  const mongooseError = _.get(error, 'response.data.error');
   if (mongooseError) {
     statusCode = 400;
     message = `Schema validation error: ${mongooseError}`;
@@ -64,7 +64,7 @@ function sendData(data, res) {
 }
 
 function loadSchema(data, schema): Promise<any> {
-  let validationOptions = {
+  const validationOptions = {
     stripUnknown: true
   };
 
@@ -79,7 +79,7 @@ function loadSchema(data, schema): Promise<any> {
         return reject(err);
       }
 
-      let validationMessage = err.details[0].message;
+      const validationMessage = err.details[0].message;
 
       error = new Error('Validation Error');
       error.isValidationError = true;
@@ -91,7 +91,7 @@ function loadSchema(data, schema): Promise<any> {
 }
 
 function sendActivationEmail(email, token) {
-  let data = {
+  const data = {
     token,
     siteRootUrl: config.rootUrl
   };
@@ -103,7 +103,7 @@ function sendActivationEmail(email, token) {
 }
 
 function sendResetPasswordEmail(email, token) {
-  let data = {
+  const data = {
     token,
     siteRootUrl: config.rootUrl
   };

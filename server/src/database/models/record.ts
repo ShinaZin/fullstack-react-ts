@@ -1,8 +1,7 @@
 import * as mongoose from 'mongoose';
 
-let ObjectId = mongoose.Schema.ObjectId;
-
-let schema = new mongoose.Schema({
+const {ObjectId} = mongoose.Schema.Types;
+const schema = new mongoose.Schema({
   date: {
     type: Date,
     required: true

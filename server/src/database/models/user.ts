@@ -1,7 +1,7 @@
 import * as mongoose from 'mongoose';
 import * as bcrypt from 'bcrypt-nodejs';
 
-let schema = new mongoose.Schema({
+const schema = new mongoose.Schema({
   email: {
     type: String,
     required: true,

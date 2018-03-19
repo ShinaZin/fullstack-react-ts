@@ -61,7 +61,7 @@ function initErrorHandling() {
 
     console.log(err);
 
-    let message = _.isError(err) ? err.message : err;
+    let message: string = _.isError(err) ? err.message : err;
     message = config.isDevLocal ? message : 'Server Error';
 
     res.status(500).send({error: message});

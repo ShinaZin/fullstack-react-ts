@@ -3,8 +3,8 @@ import * as _ from 'lodash';
 import config from '../config';
 import logger from '../logger';
 
-let db = null;
-let models = {
+const db = null;
+const models = {
   User: null,
   Record: null,
   Category: null
@@ -16,9 +16,9 @@ export default {
 };
 
 async function init() {
-  mongoose.Promise = Promise;
+  (<any>mongoose).Promise = Promise;
 
-  let connectionStr = getConnectionString();
+  const connectionStr = getConnectionString();
 
   try {
     await mongoose.connect(connectionStr, {
@@ -30,8 +30,8 @@ async function init() {
   }
 
   //init models
-  for (let modelName of Object.keys(models)) {
-    let model = require(`./models/${_.lowerCase(modelName)}`);
+  for (const modelName of Object.keys(models)) {
+    const model = require(`./models/${_.lowerCase(modelName)}`);
 
     models[modelName] = model;
   }

@@ -22,15 +22,15 @@ export default {
 };
 
 async function getUserByEmail(email) {
-  let User = db.models.User;
+  const User = db.models.User;
 
   return await User.findOne({email});
 }
 
 async function getLocalUserByEmail(email: string) {
-  let user = await getUserByEmail(email);
+  const user = await getUserByEmail(email);
 
-  let noLocalProfile = !user || !user.profile.local;
+  const noLocalProfile = !user || !user.profile.local;
 
   if (noLocalProfile) return null;
 
@@ -38,16 +38,16 @@ async function getLocalUserByEmail(email: string) {
 }
 
 async function saveLocalAccount(user, userData) {
-  let User = db.models.User;
+  const User = db.models.User;
 
-  let localProfile: any = {};
+  const localProfile: any = {};
 
   localProfile.firstName = userData.firstName;
   localProfile.lastName = userData.lastName;
   localProfile.email = userData.email;
   localProfile.password = new User().generateHash(userData.password);
 
-  let activationToken = generateActivationToken();
+  const activationToken = generateActivationToken();
   localProfile.activation = {
     token: activationToken,
     created: new Date()
@@ -71,21 +71,21 @@ async function saveLocalAccount(user, userData) {
 }
 
 async function getUserById(id) {
-  let User = db.models.User;
+  const User = db.models.User;
 
   return await User.findById(id);
 }
 
 async function getUsers() {
-  let User = db.models.User;
+  const User = db.models.User;
 
   return await User.find();
 }
 
 async function getUserByActivationToken(token: string) {
-  let users = await getUsers();
+  const users = await getUsers();
 
-  let findUser = _.find(users, (user: any) => {
+  const findUser = _.find(users, (user: any) => {
     return user.profile.local && user.profile.local.activation.token === token;
   });
 
@@ -93,7 +93,7 @@ async function getUserByActivationToken(token: string) {
 }
 
 async function refreshActivationToken(userId: number) {
-  let user = await getUserById(userId);
+  const user = await getUserById(userId);
 
   if (!user) throw new AppError('');
 
@@ -106,7 +106,7 @@ async function refreshActivationToken(userId: number) {
 }
 
 async function activateUser(userId: number) {
-  let user = await getUserById(userId);
+  const user = await getUserById(userId);
 
   if (!user) throw new AppError('User not found.');
 
@@ -117,7 +117,7 @@ async function activateUser(userId: number) {
 }
 
 async function updateUser(userData) {
-  let user = await getUserByEmail(userData.email.toLowerCase());
+  const user = await getUserByEmail(userData.email.toLowerCase());
 
   if (!user) return;
 
@@ -128,13 +128,13 @@ async function updateUser(userData) {
 }
 
 async function removeUser(id) {
-  let User = db.models.User;
+  const User = db.models.User;
 
   return await User.remove({_id: id});
 }
 
 async function resetPassword(userId: number) {
-  let user = await getUserById(userId);
+  const user = await getUserById(userId);
 
   if (!user) throw new AppError('Cannot find user by Id');
 
@@ -147,7 +147,7 @@ async function resetPassword(userId: number) {
 }
 
 async function updateUserPassword(userId: number, password: string) {
-  let user = await getUserById(userId);
+  const user = await getUserById(userId);
 
   if (!user) throw new AppError('Cannot find user');
 
@@ -158,9 +158,9 @@ async function updateUserPassword(userId: number, password: string) {
 }
 
 async function getUserByResetToken(token: string) {
-  let users = await getUsers();
+  const users = await getUsers();
 
-  let findUser = _.find(users, (user: any) => {
+  const findUser = _.find(users, (user: any) => {
     return user.profile.local && user.profile.local.reset.token === token;
   });
 
@@ -168,7 +168,7 @@ async function getUserByResetToken(token: string) {
 }
 
 async function refreshResetToken(userId: number) {
-  let user = await getUserById(userId);
+  const user = await getUserById(userId);
 
   if (!user) throw new AppError('Cannot find user');
 
@@ -181,6 +181,6 @@ async function refreshResetToken(userId: number) {
 }
 
 function generateActivationToken(): string {
-  let token = crypto.randomBytes(32).toString('hex');
+  const token = crypto.randomBytes(32).toString('hex');
   return token;
 }

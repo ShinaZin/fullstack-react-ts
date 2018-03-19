@@ -1,0 +1,33 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.overlay-style {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  z-index: 999;
+}
+
+.item-row {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .item-row {
+    margin-bottom: 15px;
+  }
+}

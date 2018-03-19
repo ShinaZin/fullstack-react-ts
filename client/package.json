@@ -1,0 +1,46 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:5000",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "format": "prettier \"src/**/*.{js,json,css}\" --write"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "jsxBracketSameLine": true,
+    "bracketSpacing": false
+  },
+  "globalDependencies": {
+    "react-scripts": "1.1.0"
+  },
+  "dependencies": {
+    "axios": "0.17.1",
+    "bootstrap": "3.3.7",
+    "classnames": "2.2.5",
+    "date-fns": "1.28.5",
+    "flatpickr": "3.0.7",
+    "font-awesome": "4.7.0",
+    "jquery": "3.2.1",
+    "js-cookie": "2.1.4",
+    "lodash": "4.17.4",
+    "prop-types": "15.6.0",
+    "react": "16.1.1",
+    "react-autobind": "1.0.6",
+    "react-bootstrap": "0.31.5",
+    "react-dom": "16.1.1",
+    "react-flatpickr": "3.5.1",
+    "react-helmet": "5.2.0",
+    "react-redux": "5.0.6",
+    "react-router-bootstrap": "0.24.4",
+    "react-router-dom": "4.2.2",
+    "redux": "3.7.2",
+    "redux-thunk": "2.2.0",
+    "toastr": "2.1.2"
+  }
+}

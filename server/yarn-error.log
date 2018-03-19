@@ -1,0 +1,77 @@
+Arguments: 
+  D:\Program Files\nodejs\node.exe D:\Program Files\Yarn\bin\yarn.js --no-lockfile
+
+PATH: 
+  C:\Users\Дом\bin;D:\Program Files\Git\mingw32\bin;D:\Program Files\Git\usr\local\bin;D:\Program Files\Git\usr\bin;D:\Program Files\Git\usr\bin;D:\Program Files\Git\mingw32\bin;D:\Program Files\Git\usr\bin;C:\Users\Дом\bin;C:\Program Files\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Windows Kits\8.1\Windows Performance Toolkit;D:\Programms\Delphi7SE\bin;D:\Programms\Delphi7SE\Projects\BPL;D:\Programms\Putty;D:\Programms\GnuWin32\bin;C:\Program Files\cURL\bin;D:\Program Files\nodejs;D:\Programms\Android\sdk\platform-tools;D:\Programms\Android\sdk\tools;D:\Program Files\Git\cmd;D:\FPC\3.0.4\bin\i386-Win32;D:\Program Files\Yarn\bin;D:\Program Files\Python35\Scripts;D:\Program Files\Python35;C:\Users\Дом\.rustup\toolchains\stable-i686-pc-windows-msvc\bin;C:\Users\Дом\AppData\Roaming\npm;C:\Program Files\Python34;C:\Program Files\Python34\Tools\Scripts;C:\Users\Дом\.cargo\bin;D:\Programms\Portable;D:\Program Files\LLVM\bin;C:\Users\Дом\AppData\Local\Yarn\bin;D:\Program Files\MongoDB\Server\3.2\bin;D:\Program Files\Git\usr\bin\vendor_perl;D:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  6.11.0
+
+Platform: 
+  win32 ia32
+
+npm manifest: 
+  {
+    "name": "server",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "start": "npm run serve",
+      "serve": "nodemon --exec ts-node -- ./src/index.ts"
+    },
+    "author": "Yegor Sytnyk",
+    "license": "ISC",
+    "prettier": {
+      "printWidth": 120,
+      "singleQuote": true,
+      "jsxBracketSameLine": true,
+      "bracketSpacing": false
+    },
+    "globalDependencies": {
+      "typescript": "2.2.1",
+      "nodemon": "1.11.0",
+      "ts-node": "3.0.2"
+    },
+    "dependencies": {
+      "@types/chai": "4.1.1",
+      "@types/fs-extra": "5.0.0",
+      "@types/node": "9.3.0",
+      "bcrypt-nodejs": "0.0.3",
+      "body-parser": "1.18.2",
+      "cookie-parser": "1.4.3",
+      "cors": "2.8.4",
+      "date-fns": "1.29.0",
+      "express": "4.16.2",
+      "fs-extra": "5.0.0",
+      "handlebars": "4.0.11",
+      "joi": "13.1.0",
+      "jsonwebtoken": "8.1.0",
+      "lodash": "4.17.4",
+      "mongoose": "5.0.1",
+      "morgan": "1.9.0",
+      "nodemailer": "4.4.1",
+      "nodemailer-sendgrid-transport": "0.2.0",
+      "strip-json-comments": "2.0.1",
+      "winston": "2.4.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Found incompatible module
+      at MessageError.Error (native)
+      at new MessageError (D:\Program Files\Yarn\lib\cli.js:186:110)
+      at checkOne (D:\Program Files\Yarn\lib\cli.js:62444:11)
+      at Object.check (D:\Program Files\Yarn\lib\cli.js:62463:5)
+      at D:\Program Files\Yarn\lib\cli.js:22803:73
+      at next (native)
+      at step (D:\Program Files\Yarn\lib\cli.js:98:30)
+      at D:\Program Files\Yarn\lib\cli.js:109:13

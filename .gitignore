@@ -4,3 +4,4 @@
 /build
 shrinkwrap.yaml
 node_modules
+*.log

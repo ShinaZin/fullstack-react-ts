@@ -1,1 +1,1 @@
-Client template for build-app. Project "full".
+# Client template for build-app. Project "full".

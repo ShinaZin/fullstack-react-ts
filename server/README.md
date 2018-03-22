@@ -1,1 +1,1 @@
-Server template for build-app. Project "full".
+# Server template for build-app. Project "full".

@@ -4,10 +4,10 @@
   "private": true,
   "proxy": "http://localhost:5000",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
     "format": "prettier \"src/**/*.{js,json,css}\" --write"
   },
   "prettier": {
@@ -16,10 +16,10 @@
     "jsxBracketSameLine": true,
     "bracketSpacing": false
   },
-  "globalDependencies": {
-    "react-scripts": "1.1.0"
-  },
+  "globalDependencies": {},
   "dependencies": {
+    "@types/react-redux": "^5.0.15",
+    "@types/react-router-dom": "^4.2.5",
     "axios": "0.17.1",
     "bootstrap": "3.3.7",
     "classnames": "2.2.5",
@@ -39,8 +39,17 @@
     "react-redux": "5.0.6",
     "react-router-bootstrap": "0.24.4",
     "react-router-dom": "4.2.2",
+    "react-scripts-ts": "2.8.0",
     "redux": "3.7.2",
     "redux-thunk": "2.2.0",
-    "toastr": "2.1.2"
+    "toastr": "2.1.2",
+    "tslint-react": "^3.5.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.105",
+    "@types/node": "^9.4.7",
+    "@types/react": "^16.0.40",
+    "@types/react-dom": "^16.0.4",
+    "typescript": "^2.7.2"
   }
 }

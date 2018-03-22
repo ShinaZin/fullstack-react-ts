@@ -5,3 +5,5 @@
 shrinkwrap.yaml
 node_modules
 *.log
+client/yarn.lock
+client/package-lock.json

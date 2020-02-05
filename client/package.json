@@ -21,7 +21,7 @@
     "@types/react-redux": "^5.0.15",
     "@types/react-router-dom": "^4.2.5",
     "axios": "0.18.1",
-    "bootstrap": "3.3.7",
+    "bootstrap": "3.4.1",
     "classnames": "2.2.5",
     "date-fns": "1.28.5",
     "flatpickr": "3.0.7",

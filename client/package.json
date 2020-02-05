@@ -33,7 +33,7 @@
     "react": "16.1.1",
     "react-autobind": "1.0.6",
     "react-bootstrap": "0.31.5",
-    "react-dom": "16.1.1",
+    "react-dom": "16.1.2",
     "react-flatpickr": "3.5.1",
     "react-helmet": "5.2.0",
     "react-redux": "5.0.6",

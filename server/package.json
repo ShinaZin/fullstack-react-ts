@@ -33,7 +33,7 @@
     "handlebars": "4.7.3",
     "joi": "13.1.0",
     "jsonwebtoken": "8.1.0",
-    "lodash": "4.17.4",
+    "lodash": "4.17.20",
     "mongoose": "5.8.0",
     "morgan": "1.9.1",
     "nodemailer": "4.4.1",
